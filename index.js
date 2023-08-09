@@ -4,6 +4,7 @@ const User=require('./db/user')
 const Product=require('./db/product')
 const cors=require('cors')
 const app=express()
+const PORT= process.env.PORT||500
 app.use(express.json())
 app.use(cors())
 app.post("/resister",async(req,resp)=>{
@@ -109,4 +110,6 @@ app.put("/product/:id",async(req,resp)=>{
 //     })
 // })
 
-app.listen('5000')
+app.listen(PORT,()=>{
+    console.log('server start at port no ${PORT}')
+})
