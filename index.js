@@ -4,7 +4,7 @@ const User=require('./db/user')
 const Product=require('./db/product')
 const cors=require('cors')
 const app=express()
-const PORT= process.env.PORT||500
+const PORT= process.env.PORT || 5000
 app.use(express.json())
 app.use(cors())
 app.post("/resister",async(req,resp)=>{
